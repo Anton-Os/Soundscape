@@ -37,10 +37,6 @@ ExternalProject_Add(kissfft
     BUILD_BYPRODUCTS ${kissfft_src}
 )
 
-# SUPPORT_MIDI needs no external project, plugin/MIDI.c reads and writes MIDI files on its own
-# Steev's midilib (https://github.com/MarquisdeGeek/midilib) is left out: it is released under the GPL 2,
-# and midifile.c includes <endian.h>, which the Windows toolchains do not provide
-
 # TODO: Check CUDA for cuFFT support?
 
 message(STATUS "miniaudio library is ${miniaudio_lib} and header is ${miniaudio_h}")
